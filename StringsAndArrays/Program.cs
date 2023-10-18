@@ -130,10 +130,19 @@ namespace StringsAndArrays
             // 1. String to Array
             // 1.1 Create new empty words string array
 
+            string[] words = { };
+
             // 1.2 Try to get each word from the helloWorld variable and assing the values to
             //     the created words string array
 
+            Array.Resize(ref words, words.Length + 1);
+            words[words.Length - 1] = helloWorld;
+
             // 1.3 Output the values of the words array
+
+            Console.WriteLine(words[words.Length - 1]);
+
+            // I know there has to be a cleaner way. But brain no thought.
         }
     }
 }
